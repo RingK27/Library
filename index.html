@@ -12,20 +12,20 @@
 </head>
 <body>
     <main class="wrapper">
-        <section class="sidebar">
-            <div class="book-input contains">
-                <label for="btitle">Title</label>
-                <input class="input" type="text" id="btitle" name="btitle">
-                <label for="bauth">Author</label>
-                <input class="input" type="text" id="bauth" name="bauth">
-                <label for="bpages">Pages</label>
-                <input class="input" type="number" id="bpages" name="bpages">
-                <label for="bread">Read?</label>
-                <input class="input" type="text" id="bread" name="bread">
-                <button id="addBtn">Add book</button>
-            </div>
-            <div class="welcome contains">
-
+        <section class="sidebar">            
+                <form class="book-input contains">
+                    <label for="btitle">Title</label>
+                    <input class="input" type="text" id="btitle" name="btitle" required>
+                    <label for="bauth">Author</label>
+                    <input class="input" type="text" id="bauth" name="bauth" required>
+                    <label for="bpages">Pages</label>
+                    <input class="input" type="number" id="bpages" name="bpages" required>
+                    <label for="read">Read?</label> 
+                    <input type="checkbox" id="bread" name="bread" value="yes">
+                    <button id="addBtn">Add book</button>                    
+                </form>            
+            <div class="welcome">
+                <p id="welcome-text"><h2>THE (not so) ALMIGHTY HTML+CSS+JS library that will not save what you add to it!</h2><br> proudly made by <strong>RingK</strong></p>
             </div>
         </section>
         <div class="book-display contains" id="book-cards-container">
