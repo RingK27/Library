@@ -5,18 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <label for="btitle">Title</label>
-    <input type="text" id="btitle" name="btitle">
-    <label for="bauth">Author</label>
-    <input type="text" id="bauth" name="bauth">
-    <label for="bpages">Numero di pagine</label>
-    <input type="number" id="bpages" name="bpages">
-    <label for="bread">Already read?</label>
-    <input type="text" id="bread" name="bread">
-    <button id="addBtn">Aggiungi il libro</button>
+    <main class="wrapper">
+        <section class="sidebar">
+            <div class="book-input contains">
+                <label for="btitle">Title</label>
+                <input class="input" type="text" id="btitle" name="btitle">
+                <label for="bauth">Author</label>
+                <input class="input" type="text" id="bauth" name="bauth">
+                <label for="bpages">Pages</label>
+                <input class="input" type="number" id="bpages" name="bpages">
+                <label for="bread">Read?</label>
+                <input class="input" type="text" id="bread" name="bread">
+                <button id="addBtn">Add book</button>
+            </div>
+            <div class="welcome contains">
+
+            </div>
+        </section>
+        <div class="book-display contains" id="book-cards-container">
+
+        </div>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>

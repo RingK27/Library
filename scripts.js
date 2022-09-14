@@ -24,7 +24,31 @@ function addBookToLibrary() {
 }
 
 function showBooks() {
+    let container = document.getElementById("book-cards-container");
+    container.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i].title + " " + myLibrary[i].author + " " + myLibrary[i].pages + " " + myLibrary[i].isRead);
+        
+        const card = document.createElement("div");
+        const firstLine = document.createElement("p");
+        const secondLine = document.createElement("p");
+        const thirdLine = document.createElement("div");
+        card.className = "card contains";
+        card.setAttribute("style", "padding: 10px")
+        firstLine.innerHTML = myLibrary[i].title + "<br> by " + myLibrary[i].author +"<br><br><br><br>";
+        secondLine.innerHTML = "number of pages: " + myLibrary[i].pages + "<br><br><br>";
+        thirdLine.innerText = "Read: " + myLibrary[i].isRead;
+        card.appendChild(firstLine);
+        card.appendChild(secondLine);
+        card.appendChild(thirdLine);
+        container.appendChild(card);
     }  
 }
+
+let leviathan = new book("Leviathan Wakes", "James S. A. Corey", 598, "yes");
+let gradini = new book("Gradini", "Giuseppe Pietro Tornatore", 105, "yes");
+let anelli = new book("Il Signore degli Anelli", "J. R. R. Tolkien", 1380, "yes");
+myLibrary.push(leviathan);
+myLibrary.push(gradini);
+myLibrary.push(anelli);
+
+showBooks();
