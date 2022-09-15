@@ -22,8 +22,7 @@ function addBookToLibrary() {
         bread = "no";
     }
     bookToAdd = new book(btitle.value, bauth.value, bpages.value, bread, myLibrary.length);
-    myLibrary.push(bookToAdd);
-    console.log(bookToAdd.iNumber);
+    myLibrary.push(bookToAdd);    
     btitle.value = "";
     bauth.value = ""; 
     bpages.value = ""; 
@@ -48,6 +47,7 @@ function showBooks() {
         btnDel.innerText = "Delete book";        
         card.className = "card contains";
         card.setAttribute("style", "padding: 10px")
+        card.dataset.inumber = myLibrary[i].iNumber;
         firstLine.innerHTML = myLibrary[i].title + "<br> by " 
             + myLibrary[i].author +"<br><br>";
         secondLine.innerHTML = "number of pages: " 
@@ -65,7 +65,7 @@ function showBooks() {
         card.appendChild(secondLine);
         card.appendChild(thirdLine);
         card.appendChild(fourthLine);
-        container.appendChild(card);
+        container.appendChild(card);        
     }  
 }
 
