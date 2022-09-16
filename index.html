@@ -13,7 +13,7 @@
 <body>
     <main class="wrapper">
         <section class="sidebar">            
-                <form class="book-input contains">
+                <form class="book-input contains" onsubmit="addBookToLibrary();return false">
                     <label for="btitle">Title</label>
                     <input class="input" type="text" id="btitle" name="btitle" required>
                     <label for="bauth">Author</label>
@@ -22,7 +22,7 @@
                     <input class="input" type="number" id="bpages" name="bpages" required>
                     <label for="read">Read?</label> 
                     <input type="checkbox" id="bread" name="bread" value="yes">
-                    <button id="addBtn">Add book</button>                    
+                    <input type="submit" value="Add Book" id="addBtn">                   
                 </form>            
             <div class="welcome">
                 <p id="welcome-text"><h2>THE (not so) ALMIGHTY HTML+CSS+JS library that will not save what you add to it!</h2><br> proudly made by <strong>RingK</strong></p>

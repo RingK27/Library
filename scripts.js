@@ -1,10 +1,10 @@
 let myLibrary = new Array();
-let addBtn = document.getElementById("addBtn");
+let Btn = document.getElementById("addBtn");
 let btitle = document.getElementById("btitle");
 let bauth = document.getElementById("bauth");
 let bpages = document.getElementById("bpages");
 
-addBtn.addEventListener("click", addBookToLibrary);
+//addBtn.addEventListener("click", addBookToLibrary);
 
 function book(title, author, pages, isRead, iNumber) {
     this.title = title;
